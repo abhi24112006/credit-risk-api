@@ -24,7 +24,7 @@ def log_prediction(input_data, result):
 
     log_entry = {
         **input_data, #unpacks all request fields
-        **result, #adds probability, prediction and rick level
+        **result, #adds probability, prediction and risk level
         "timestamp": datetime.now() #stores timestamp
     }
 

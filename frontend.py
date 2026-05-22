@@ -41,6 +41,7 @@ cb_person_cred_hist_length = st.number_input(
 )
 
 # Predict Button
+# Predict Button
 if st.button("Predict Risk"):
 
     input_data = {
@@ -60,7 +61,7 @@ if st.button("Predict Risk"):
 
     # Send POST request to FastAPI
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "https://credit-risk-api-zycq.onrender.com/predict",
         json=input_data
     )
 
