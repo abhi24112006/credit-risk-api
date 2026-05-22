@@ -16,7 +16,7 @@ A full-stack machine learning application for predicting loan default risk using
 ## 🚀 Live Deployment
 
 - **API Endpoint**: [https://credit-risk-api-zycq.onrender.com](https://credit-risk-api-zycq.onrender.com)
-- **Streamlit App**: Available through the repository
+- **Streamlit Frontend**: [https://credit-risk-api-j5pas95j3qhaxshr57bvy2.streamlit.app/](https://credit-risk-api-j5pas95j3qhaxshr57bvy2.streamlit.app/)
 
 ## 📋 Input Parameters
 
