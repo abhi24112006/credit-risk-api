@@ -4,10 +4,10 @@ A full-stack machine learning application for predicting loan default risk using
 
 ## 🎯 Features
 
-- **ML-Powered Predictions**: XGBoost-based credit risk classification model
+- **ML-Powered Predictions**: Machine learning-based credit risk classification model
 - **REST API Backend**: FastAPI with automatic API documentation and validation
 - **Interactive Frontend**: Streamlit web application for real-time predictions
-- **Risk Classification**: Threshold-based risk level determination (Low/Medium/High)
+- **Risk Classification**: Threshold-based risk level determination
 - **Data Validation**: Pydantic schemas for robust input validation
 - **Prediction Logging**: CSV-based logging of all predictions for audit trails
 - **Production Ready**: Deployed on Render with automatic scaling
@@ -57,10 +57,10 @@ The API returns comprehensive prediction results:
 ### Backend
 - **Framework**: FastAPI 0.133.1
 - **Server**: Uvicorn 0.41.0
-- **ML Model**: XGBoost 3.2.0
+- **Model Serialization**: joblib 1.5.3
 - **Data Processing**: Pandas 2.3.3, NumPy 2.4.0
 - **Validation**: Pydantic 2.12.5
-- **Serialization**: scikit-learn 1.8.0 (for model storage)
+- **ML Framework**: scikit-learn 1.8.0
 
 ### Frontend
 - **UI Framework**: Streamlit 1.53.1
@@ -154,22 +154,11 @@ credit-risk-api/
 │   ├── model.py          # ML model prediction logic
 │   └── schemas.py        # Pydantic data validation schemas
 ├── frontend.py           # Streamlit web interface
-├── loan_default_model.pkl # Trained XGBoost model
+├── loan_default_model.pkl # Trained machine learning model
 ├── requirements.txt      # Python dependencies
 ├── Procfile             # Render deployment configuration
 └── logs.csv             # Prediction audit logs
 ```
-
-## 🤖 Model Architecture
-
-- **Algorithm**: XGBoost Classifier
-- **Training Data**: Historical loan default dataset
-- **Features**: 11 borrower and loan characteristics
-- **Output**: Binary classification with probability scores
-- **Risk Levels**:
-  - Low: Probability ≤ 0.33
-  - Medium: Probability 0.34-0.66
-  - High: Probability ≥ 0.67
 
 ## 📝 Logging
 
@@ -194,22 +183,6 @@ The application is configured for deployment on Render:
 1. **Backend**: Deployed as a Web Service running `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 2. **Auto-scaling**: Enabled for handling variable loads
 3. **Environment Variables**: Configured for production settings
-
-## 📈 Performance Metrics
-
-- **API Response Time**: <100ms for single predictions
-- **Model Accuracy**: Optimized for fintech risk assessment
-- **Throughput**: Handles multiple concurrent requests
-- **Uptime**: Production-grade reliability on Render
-
-## 🛣️ Roadmap
-
-- [ ] Model retraining pipeline
-- [ ] Advanced feature engineering options
-- [ ] API rate limiting and authentication
-- [ ] Historical prediction analytics dashboard
-- [ ] Model explainability (SHAP values)
-- [ ] Multi-model ensemble predictions
 
 ## 🤝 Contributing
 
